@@ -1,0 +1,11 @@
+.jumbotron {
+  background-color: lightblue;
+  height: 300px;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  color: blue;
+}
+
+background-image: url("http://vignette3.wikia.nocookie.net/simpsons/images/a/af/Plopper_Tapped_Out.png/revision/latest?cb=20150927000049");
