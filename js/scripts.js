@@ -6,7 +6,10 @@ var pigLatin = function(input) {
   var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
 
   var firstChecker = function(splitInput) {
-    if (consonants.indexOf(splitInput[0]) > -1) {
+    if (splitInput[0] === "q" && splitInput[1] === "u") {
+      splitInput.shift(splitInput.push(splitInput[0]));
+      splitInput.shift(splitInput.push(splitInput[0]));
+    } else if (consonants.indexOf(splitInput[0]) > -1) {
       splitInput.shift(splitInput.push(splitInput[0]));
       firstChecker(splitInput);
     }
