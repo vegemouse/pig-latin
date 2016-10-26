@@ -1,16 +1,27 @@
 var pigLatin = function(string) {
-  var lowerCaseString = string.toLowerCase();
-  var splitString = lowerCaseString.split("");
+  var letters = string.toLowerCase().split("");
   var vowels = ["a", "e", "i", "o", "u"];
   var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
-  if (vowels.indexOf(splitString[0]) > -1 ) {
-    splitString.push("ay");
-  } else if (consonants.indexOf(splitString[0]) > -1 ) {
-    splitString.push(splitString.shift());
+  var vowelsLocation = [];
+
+  if (vowels.indexOf(letters[0]) > -1 ) {
+    letters.push("ay");
   }
 
-  console.log(splitString);
+  consonants.forEach(function(consonant) {
+    if (consonant = letters[0]) {
+      letters.shift(letters.push(letters[0]));
+    }
+  })
+  // for (i = 0; i < letters.length; i++) {
+  //   if (vowels.indexOf(letters(i)) > -1) {
+  //     vowelsLocation.push(vowels[i]);
+  //   }
+  // }
+    console.log(vowelsLocation);
+    console.log(letters);
 }
+
 
 
 $(function() {
@@ -19,4 +30,4 @@ $(function() {
     originalString = $("#input input").val();
     pigLatin(originalString);
   })
-})
+});
